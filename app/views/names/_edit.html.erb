@@ -1,0 +1,9 @@
+<div data-controller= 'crud'>
+  <%= hidden_field_tag 'show', name_path(@name), class: 'show_operation'%>
+  <div id='show_div'></div>
+  <h1>Editing Name</h1>
+  <%= render 'form', name: @name %>
+  <%= button_tag 'Show', data: { action: 'click->crud#show' } %>
+  <%= hidden_field_tag 'back', names_path, class: 'index_operation'%>
+  <%= button_tag 'Back', data: { action: 'click->crud#index' } %>
+</div>

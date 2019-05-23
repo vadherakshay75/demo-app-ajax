@@ -1,0 +1,18 @@
+<div data-controller= 'crud'>
+  <p>
+    <strong>First name:</strong>
+    <%= @name.first_name %>
+  </p>
+  <p>
+    <strong>Middle name:</strong>
+    <%= @name.middle_name %>
+  </p>
+  <p>
+    <strong>Last name:</strong>
+    <%= @name.last_name %>
+  </p>
+  <%= hidden_field_tag 'edit', edit_name_path(@name), class: 'edit_operation'%>
+  <%= button_tag 'Edit', data: { action: 'click->crud#edit' } %>
+  <%= hidden_field_tag 'back', names_path, class: 'index_operation'%>
+  <%= button_tag 'Back', data: { action: 'click->crud#index' } %>
+</div>
